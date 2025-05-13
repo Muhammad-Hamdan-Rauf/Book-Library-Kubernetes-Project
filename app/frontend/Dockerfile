@@ -16,11 +16,11 @@ COPY . .
 # Build the application for production
 RUN npm run build
 
-# Install serve globally
+# Install serve to run the application
 RUN npm install -g serve
 
 # Expose port 3000
 EXPOSE 3000
 
-# Use serve to handle client-side routing
-CMD ["serve", "-s", "dist", "-l", "3000", "--no-clipboard"]
+# Run the application
+CMD ["serve", "-s", "dist", "-l", "3000"]
